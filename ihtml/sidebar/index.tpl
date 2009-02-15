@@ -8,7 +8,7 @@
 <h3><span>Upcoming Events</span></h3>
 <ul id="dates">
 {section name=i loop=$upcoming}	
-	<li><a href="javascript:Open('cal_id={$upcoming[i].calendar_id}');">{$upcoming[i].date|date_format:"%n/%j"} {$upcoming[i].title}</a></li>
+	<li><a href="javascript:Open('cal_id={$upcoming[i].calendar_id}');">{$upcoming[i].date|date_format:"%m/%d"} {$upcoming[i].title}</a></li>
 {/section}
 </ul>
 

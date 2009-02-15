@@ -44,7 +44,7 @@ if(isset($form_data['Submit']))
       //return $objResponse;
    }*/
    
-   $result = $db->getAll('insert into dumb_freshmen_form values (NULL,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)', array($form_data['name'],
+   $result = $db->getAll('insert into dumb_freshmen_form values (NULL,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)', array($form_data['name'],
                                                                                        $form_data['address'],
                                                                                        $form_data['city'],
                                                                                        $form_data['state'],
@@ -57,6 +57,7 @@ if(isset($form_data['Submit']))
                                                                                        $form_data['graduation'],
                                                                                        $form_data['major'],
                                                                                        $form_data['size'],
+                                                                                       $form_data['dukeID'],
                                                                                        $form_data['questions'],
                                                                                        date('Y-m-d')));
    
@@ -176,6 +177,7 @@ $form->addElement('text', 'director', 'Band Director', array('size' => 40, 'maxl
 $form->addElement('text', 'graduation', 'Duke Graduation Year', array('size' => 4, 'maxlength' =>4 ));
 $form->addElement('text', 'major', 'Intended Major', array('size' => 40, 'maxlength' =>80 ));
 $form->addElement('select', 'size', 'Shirt Size', array('S'=>'S', 'M'=>'M', 'L'=>'L', 'XL'=>'XL', 'XXL'=>'XXL'));
+$form->addElement('text', 'dukeID', 'Duke ID', array('size' => 20, 'maxlength' => 20 ));
 $form->addElement('textarea', 'questions', 'Questions');
 $form->addElement('file', 'image', 'Send us your photo');
 $form->addElement('reset', 'Clear', 'Clear');

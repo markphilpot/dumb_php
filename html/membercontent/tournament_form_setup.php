@@ -88,7 +88,7 @@ $data .= '</table>';
 
 <div id="main_app">
 <h1 class="center">Tournament Form Setup</h1>
-<p>Below are the six options of the tournament form.  You can edit the title of the Option,
+<p>Below are the options on the tournament form.  You can edit the title of the Option,
 but it is recommended that you stick with the current setup for continuity between years.
 Edit the date field to select the weekend of the Option (e.g. March 7-10, 2003).</p>
 <?php

@@ -10,6 +10,7 @@ function Open(x)
 {/literal}
 {php}
 //require_once 'Date/Date.php';
+/*
 require_once 'Calendar/Decorator/Uri.php';
 require_once 'Calendar/Month/Weekdays.php';
 require_once 'Calendar/Day.php';
@@ -136,5 +137,10 @@ while( $Day = $calendar->fetch() )
 endTable();
 
 print "</div> <!-- end calendar -->"
-
+*/
 {/php}
+<div id='calendar'>
+<iframe src="//www.google.com/calendar/embed?
+title=Duke%20Band%20Calendar&amp;height=600&amp;wkst=1&amp;bgcolor=%23ffffff&amp;src=dukeathleticbands%40gmail.com&amp;color=%2329527A
+&amp;ctz=America%2FNew_York" style=" border-width:0 " width="740" height="600" frameborder="0" scrolling="no"></iframe>
+</div>

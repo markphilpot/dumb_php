@@ -45,9 +45,13 @@ We'd like to get to know you better by asking you to complete the form below.</p
       <td>{$FormData.size.html}</td>
    </tr>
    <tr>
+      <th class="form_header">{$FormData.dukeID.label}</th>
+      <td>{$FormData.dukeID.html}</td>
+   </tr>
+<!--   <tr>
       <th class="form_header">{$FormData.image.label}<br />(Optional)</th>
       <td>{$FormData.image.html}</td>
-   </tr>
+   </tr> -->
    <tr>
       <th class="form_header">{$FormData.questions.label}</th>
       <td>{$FormData.questions.html}</td>
