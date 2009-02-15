@@ -11,6 +11,8 @@
 
 <script type="text/javascript" src="include/login.js"></script>
 <script type="text/javaScript" src="include/menu.js"></script>
+<script type="text/javascript" src="include/scriptaculous/prototype.js"></script>
+<script type="text/javascript" src="include/scriptaculous/scriptaculous.js"></script>
 {$xajax_javascript}
 {if $alt_style == 'true'}
 {literal}

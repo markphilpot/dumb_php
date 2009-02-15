@@ -5,9 +5,6 @@ require_once "include/html_util.php";
 
 ?>
 
-<script src="../include/scriptaculous/prototype.js" type="text/javascript"></script>
-<script src="../include/scriptaculous/scriptaculous.js" type="text/javascript"></script>
-
 <div id="options">
 <h3 class="center">&nbsp;</h3>
 </div> <!-- end options -->
