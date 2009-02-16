@@ -120,7 +120,9 @@ echo "<ul id=\"options_list\">";
 $i=0;
 foreach($options as $row)
 {
-	echo "<li id=\"option_". $row['option_id'] ."\"><b>".  $row['description'] ."</b> ".$row['date']."</li>";
+	echo "<li id=\"option_". $row['option_id'] ."\">
+	<table width=600><tr><td width=400><b>".  $row['description'] ."</b> </td><td>
+	".$row['date']."</td></tr></table></li>";
 }
 
 //create a "CANNOT TRAVEL box and everything that gets put in there gets the CAN NOT TRAVEL pref number
@@ -128,7 +130,7 @@ foreach($options as $row)
 
 </ul>
 <p><b>If you can not attend a specific trip, drag it into the box below</b></p> 
-<ul id="reject_list" style="background-color:blue">
+<table id="reject_list" width=100%> <tr><td>  <br></td></tr><table>
 <br \>
 </ul>
 
