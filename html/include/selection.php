@@ -111,8 +111,12 @@ class selection
 		$ws_all->write(0,1, 'Expierence', $bold);
 		$ws_all->write(0,2, 'Instrument', $bold);
 		$ws_all->write(0,3, 'Points', $bold);
+		for($o = 1; $o <= 8; $o++)
+		{
+			$ws_all->write(0,3+$o, 'Option '.$o.' Rank', $bold);
+		}
 		
-		$results = $db->getAll($this->alle);
+		$results = $db->getAll($this->alleo);
 		$i = 1;
 		while( list($temp, $row) = each($results) )
 		{
@@ -122,216 +126,221 @@ class selection
 			$ws_all->write($i,$j++, $row['exp']);
 			$ws_all->write($i,$j++, $row['instrument']);
 			$ws_all->write($i,$j++, $row['points']);
+			for($o = 1; $o <= 8; $o++)
+			{
+				$option = "option_".$o;
+				$ws_all->write($i, $j++, $row[$option]);
+			}
 			$i++;
 		}
 		
 		//Freshmen by TP
-		$ws_all =& $workbook->addWorksheet('Freshmen by TP');
-		$ws_all->write(0,0, 'Name', $bold);
-		$ws_all->write(0,1, 'Expierence', $bold);
-		$ws_all->write(0,2, 'Instrument', $bold);
-		$ws_all->write(0,3, 'Prefer', $bold);
-		$ws_all->write(0,4, 'Abroad', $bold);
-		$ws_all->write(0,5, 'Joined', $bold);
-		$ws_all->write(0,6, 'Points', $bold);
-		
-		$results = $db->getAll($this->year_tp, array(1));
-		$i = 1;
-		while( list($temp, $row) = each($results) )
-		{
-			$j = 0;
-			$name = $row['lastname'].", ".$row['firstname'];
-			$ws_all->write($i,$j++, $name);
-			$ws_all->write($i,$j++, $row['exp']);
-			$ws_all->write($i,$j++, $row['instrument']);
-			$ws_all->write($i,$j++, $row['prefer']);
-			$ws_all->write($i,$j++, $row['abroad']);
-			$ws_all->write($i,$j++, $row['joined']);
-			$ws_all->write($i,$j++, $row['points']);
-			$i++;
-		}
-		
-		//Freshmen by ITP
-		$ws_all =& $workbook->addWorksheet('Freshmen by ITP');
-		$ws_all->write(0,0, 'Name', $bold);
-		$ws_all->write(0,1, 'Expierence', $bold);
-		$ws_all->write(0,2, 'Instrument', $bold);
-		$ws_all->write(0,3, 'Prefer', $bold);
-		$ws_all->write(0,4, 'Abroad', $bold);
-		$ws_all->write(0,5, 'Joined', $bold);
-		$ws_all->write(0,6, 'Points', $bold);
-		
-		$results = $db->getAll($this->year_itp, array(1));
-		$i = 1;
-		while( list($temp, $row) = each($results) )
-		{
-			$j = 0;
-			$name = $row['lastname'].", ".$row['firstname'];
-			$ws_all->write($i,$j++, $name);
-			$ws_all->write($i,$j++, $row['exp']);
-			$ws_all->write($i,$j++, $row['instrument']);
-			$ws_all->write($i,$j++, $row['prefer']);
-			$ws_all->write($i,$j++, $row['abroad']);
-			$ws_all->write($i,$j++, $row['joined']);
-			$ws_all->write($i,$j++, $row['points']);
-			$i++;
-		}
-		
-		//Soph by TP
-		$ws_all =& $workbook->addWorksheet('Soph by TP');
-		$ws_all->write(0,0, 'Name', $bold);
-		$ws_all->write(0,1, 'Expierence', $bold);
-		$ws_all->write(0,2, 'Instrument', $bold);
-		$ws_all->write(0,3, 'Prefer', $bold);
-		$ws_all->write(0,4, 'Abroad', $bold);
-		$ws_all->write(0,5, 'Joined', $bold);
-		$ws_all->write(0,6, 'Points', $bold);
-		
-		$results = $db->getAll($this->year_tp, array(2));
-		$i = 1;
-		while( list($temp, $row) = each($results) )
-		{
-			$j = 0;
-			$name = $row['lastname'].", ".$row['firstname'];
-			$ws_all->write($i,$j++, $name);
-			$ws_all->write($i,$j++, $row['exp']);
-			$ws_all->write($i,$j++, $row['instrument']);
-			$ws_all->write($i,$j++, $row['prefer']);
-			$ws_all->write($i,$j++, $row['abroad']);
-			$ws_all->write($i,$j++, $row['joined']);
-			$ws_all->write($i,$j++, $row['points']);
-			$i++;
-		}
-		
-		//Soph by ITP
-		$ws_all =& $workbook->addWorksheet('Soph by ITP');
-		$ws_all->write(0,0, 'Name', $bold);
-		$ws_all->write(0,1, 'Expierence', $bold);
-		$ws_all->write(0,2, 'Instrument', $bold);
-		$ws_all->write(0,3, 'Prefer', $bold);
-		$ws_all->write(0,4, 'Abroad', $bold);
-		$ws_all->write(0,5, 'Joined', $bold);
-		$ws_all->write(0,6, 'Points', $bold);
-		
-		$results = $db->getAll($this->year_itp, array(2));
-		$i = 1;
-		while( list($temp, $row) = each($results) )
-		{
-			$j = 0;
-			$name = $row['lastname'].", ".$row['firstname'];
-			$ws_all->write($i,$j++, $name);
-			$ws_all->write($i,$j++, $row['exp']);
-			$ws_all->write($i,$j++, $row['instrument']);
-			$ws_all->write($i,$j++, $row['prefer']);
-			$ws_all->write($i,$j++, $row['abroad']);
-			$ws_all->write($i,$j++, $row['joined']);
-			$ws_all->write($i,$j++, $row['points']);
-			$i++;
-		}
-		
-		//Junior by TP
-		$ws_all =& $workbook->addWorksheet('Junior by TP');
-		$ws_all->write(0,0, 'Name', $bold);
-		$ws_all->write(0,1, 'Expierence', $bold);
-		$ws_all->write(0,2, 'Instrument', $bold);
-		$ws_all->write(0,3, 'Prefer', $bold);
-		$ws_all->write(0,4, 'Abroad', $bold);
-		$ws_all->write(0,5, 'Joined', $bold);
-		$ws_all->write(0,6, 'Points', $bold);
-		
-		$results = $db->getAll($this->year_tp, array(3));
-		$i = 1;
-		while( list($temp, $row) = each($results) )
-		{
-			$j = 0;
-			$name = $row['lastname'].", ".$row['firstname'];
-			$ws_all->write($i,$j++, $name);
-			$ws_all->write($i,$j++, $row['exp']);
-			$ws_all->write($i,$j++, $row['instrument']);
-			$ws_all->write($i,$j++, $row['prefer']);
-			$ws_all->write($i,$j++, $row['abroad']);
-			$ws_all->write($i,$j++, $row['joined']);
-			$ws_all->write($i,$j++, $row['points']);
-			$i++;
-		}
-		
-		//Junior by ITP
-		$ws_all =& $workbook->addWorksheet('Junior by ITP');
-		$ws_all->write(0,0, 'Name', $bold);
-		$ws_all->write(0,1, 'Expierence', $bold);
-		$ws_all->write(0,2, 'Instrument', $bold);
-		$ws_all->write(0,3, 'Prefer', $bold);
-		$ws_all->write(0,4, 'Abroad', $bold);
-		$ws_all->write(0,5, 'Joined', $bold);
-		$ws_all->write(0,6, 'Points', $bold);
-		
-		$results = $db->getAll($this->year_itp, array(3));
-		$i = 1;
-		while( list($temp, $row) = each($results) )
-		{
-			$j = 0;
-			$name = $row['lastname'].", ".$row['firstname'];
-			$ws_all->write($i,$j++, $name);
-			$ws_all->write($i,$j++, $row['exp']);
-			$ws_all->write($i,$j++, $row['instrument']);
-			$ws_all->write($i,$j++, $row['prefer']);
-			$ws_all->write($i,$j++, $row['abroad']);
-			$ws_all->write($i,$j++, $row['joined']);
-			$ws_all->write($i,$j++, $row['points']);
-			$i++;
-		}
-		
-		//Senior by TP
-		$ws_all =& $workbook->addWorksheet('Senior by TP');
-		$ws_all->write(0,0, 'Name', $bold);
-		$ws_all->write(0,1, 'Expierence', $bold);
-		$ws_all->write(0,2, 'Instrument', $bold);
-		$ws_all->write(0,3, 'Prefer', $bold);
-		$ws_all->write(0,4, 'Abroad', $bold);
-		$ws_all->write(0,5, 'Joined', $bold);
-		$ws_all->write(0,6, 'Points', $bold);
-		
-		$results = $db->getAll($this->year_tp, array(4));
-		$i = 1;
-		while( list($temp, $row) = each($results) )
-		{
-			$j = 0;
-			$name = $row['lastname'].", ".$row['firstname'];
-			$ws_all->write($i,$j++, $name);
-			$ws_all->write($i,$j++, $row['exp']);
-			$ws_all->write($i,$j++, $row['instrument']);
-			$ws_all->write($i,$j++, $row['prefer']);
-			$ws_all->write($i,$j++, $row['abroad']);
-			$ws_all->write($i,$j++, $row['joined']);
-			$ws_all->write($i,$j++, $row['points']);
-			$i++;
-		}
-		
-		//Senior by ITP
-		$ws_all =& $workbook->addWorksheet('Senior by ITP');
-		$ws_all->write(0,0, 'Name', $bold);
-		$ws_all->write(0,1, 'Expierence', $bold);
-		$ws_all->write(0,2, 'Instrument', $bold);
-		$ws_all->write(0,3, 'Prefer', $bold);
-		$ws_all->write(0,4, 'Abroad', $bold);
-		$ws_all->write(0,5, 'Joined', $bold);
-		$ws_all->write(0,6, 'Points', $bold);
-		
-		$results = $db->getAll($this->year_itp, array(4));
-		$i = 1;
-		while( list($temp, $row) = each($results) )
-		{
-			$j = 0;
-			$name = $row['lastname'].", ".$row['firstname'];
-			$ws_all->write($i,$j++, $name);
-			$ws_all->write($i,$j++, $row['exp']);
-			$ws_all->write($i,$j++, $row['instrument']);
-			$ws_all->write($i,$j++, $row['prefer']);
-			$ws_all->write($i,$j++, $row['abroad']);
-			$ws_all->write($i,$j++, $row['joined']);
-			$ws_all->write($i,$j++, $row['points']);
-			$i++;
-		}
+//		$ws_all =& $workbook->addWorksheet('Freshmen by TP');
+//		$ws_all->write(0,0, 'Name', $bold);
+//		$ws_all->write(0,1, 'Expierence', $bold);
+//		$ws_all->write(0,2, 'Instrument', $bold);
+//		$ws_all->write(0,3, 'Prefer', $bold);
+//		$ws_all->write(0,4, 'Abroad', $bold);
+//		$ws_all->write(0,5, 'Joined', $bold);
+//		$ws_all->write(0,6, 'Points', $bold);
+//		
+//		$results = $db->getAll($this->year_tp, array(1));
+//		$i = 1;
+//		while( list($temp, $row) = each($results) )
+//		{
+//			$j = 0;
+//			$name = $row['lastname'].", ".$row['firstname'];
+//			$ws_all->write($i,$j++, $name);
+//			$ws_all->write($i,$j++, $row['exp']);
+//			$ws_all->write($i,$j++, $row['instrument']);
+//			$ws_all->write($i,$j++, $row['prefer']);
+//			$ws_all->write($i,$j++, $row['abroad']);
+//			$ws_all->write($i,$j++, $row['joined']);
+//			$ws_all->write($i,$j++, $row['points']);
+//			$i++;
+//		}
+//		
+//		//Freshmen by ITP
+//		$ws_all =& $workbook->addWorksheet('Freshmen by ITP');
+//		$ws_all->write(0,0, 'Name', $bold);
+//		$ws_all->write(0,1, 'Expierence', $bold);
+//		$ws_all->write(0,2, 'Instrument', $bold);
+//		$ws_all->write(0,3, 'Prefer', $bold);
+//		$ws_all->write(0,4, 'Abroad', $bold);
+//		$ws_all->write(0,5, 'Joined', $bold);
+//		$ws_all->write(0,6, 'Points', $bold);
+//		
+//		$results = $db->getAll($this->year_itp, array(1));
+//		$i = 1;
+//		while( list($temp, $row) = each($results) )
+//		{
+//			$j = 0;
+//			$name = $row['lastname'].", ".$row['firstname'];
+//			$ws_all->write($i,$j++, $name);
+//			$ws_all->write($i,$j++, $row['exp']);
+//			$ws_all->write($i,$j++, $row['instrument']);
+//			$ws_all->write($i,$j++, $row['prefer']);
+//			$ws_all->write($i,$j++, $row['abroad']);
+//			$ws_all->write($i,$j++, $row['joined']);
+//			$ws_all->write($i,$j++, $row['points']);
+//			$i++;
+//		}
+//		
+//		//Soph by TP
+//		$ws_all =& $workbook->addWorksheet('Soph by TP');
+//		$ws_all->write(0,0, 'Name', $bold);
+//		$ws_all->write(0,1, 'Expierence', $bold);
+//		$ws_all->write(0,2, 'Instrument', $bold);
+//		$ws_all->write(0,3, 'Prefer', $bold);
+//		$ws_all->write(0,4, 'Abroad', $bold);
+//		$ws_all->write(0,5, 'Joined', $bold);
+//		$ws_all->write(0,6, 'Points', $bold);
+//		
+//		$results = $db->getAll($this->year_tp, array(2));
+//		$i = 1;
+//		while( list($temp, $row) = each($results) )
+//		{
+//			$j = 0;
+//			$name = $row['lastname'].", ".$row['firstname'];
+//			$ws_all->write($i,$j++, $name);
+//			$ws_all->write($i,$j++, $row['exp']);
+//			$ws_all->write($i,$j++, $row['instrument']);
+//			$ws_all->write($i,$j++, $row['prefer']);
+//			$ws_all->write($i,$j++, $row['abroad']);
+//			$ws_all->write($i,$j++, $row['joined']);
+//			$ws_all->write($i,$j++, $row['points']);
+//			$i++;
+//		}
+//		
+//		//Soph by ITP
+//		$ws_all =& $workbook->addWorksheet('Soph by ITP');
+//		$ws_all->write(0,0, 'Name', $bold);
+//		$ws_all->write(0,1, 'Expierence', $bold);
+//		$ws_all->write(0,2, 'Instrument', $bold);
+//		$ws_all->write(0,3, 'Prefer', $bold);
+//		$ws_all->write(0,4, 'Abroad', $bold);
+//		$ws_all->write(0,5, 'Joined', $bold);
+//		$ws_all->write(0,6, 'Points', $bold);
+//		
+//		$results = $db->getAll($this->year_itp, array(2));
+//		$i = 1;
+//		while( list($temp, $row) = each($results) )
+//		{
+//			$j = 0;
+//			$name = $row['lastname'].", ".$row['firstname'];
+//			$ws_all->write($i,$j++, $name);
+//			$ws_all->write($i,$j++, $row['exp']);
+//			$ws_all->write($i,$j++, $row['instrument']);
+//			$ws_all->write($i,$j++, $row['prefer']);
+//			$ws_all->write($i,$j++, $row['abroad']);
+//			$ws_all->write($i,$j++, $row['joined']);
+//			$ws_all->write($i,$j++, $row['points']);
+//			$i++;
+//		}
+//		
+//		//Junior by TP
+//		$ws_all =& $workbook->addWorksheet('Junior by TP');
+//		$ws_all->write(0,0, 'Name', $bold);
+//		$ws_all->write(0,1, 'Expierence', $bold);
+//		$ws_all->write(0,2, 'Instrument', $bold);
+//		$ws_all->write(0,3, 'Prefer', $bold);
+//		$ws_all->write(0,4, 'Abroad', $bold);
+//		$ws_all->write(0,5, 'Joined', $bold);
+//		$ws_all->write(0,6, 'Points', $bold);
+//		
+//		$results = $db->getAll($this->year_tp, array(3));
+//		$i = 1;
+//		while( list($temp, $row) = each($results) )
+//		{
+//			$j = 0;
+//			$name = $row['lastname'].", ".$row['firstname'];
+//			$ws_all->write($i,$j++, $name);
+//			$ws_all->write($i,$j++, $row['exp']);
+//			$ws_all->write($i,$j++, $row['instrument']);
+//			$ws_all->write($i,$j++, $row['prefer']);
+//			$ws_all->write($i,$j++, $row['abroad']);
+//			$ws_all->write($i,$j++, $row['joined']);
+//			$ws_all->write($i,$j++, $row['points']);
+//			$i++;
+//		}
+//		
+//		//Junior by ITP
+//		$ws_all =& $workbook->addWorksheet('Junior by ITP');
+//		$ws_all->write(0,0, 'Name', $bold);
+//		$ws_all->write(0,1, 'Expierence', $bold);
+//		$ws_all->write(0,2, 'Instrument', $bold);
+//		$ws_all->write(0,3, 'Prefer', $bold);
+//		$ws_all->write(0,4, 'Abroad', $bold);
+//		$ws_all->write(0,5, 'Joined', $bold);
+//		$ws_all->write(0,6, 'Points', $bold);
+//		
+//		$results = $db->getAll($this->year_itp, array(3));
+//		$i = 1;
+//		while( list($temp, $row) = each($results) )
+//		{
+//			$j = 0;
+//			$name = $row['lastname'].", ".$row['firstname'];
+//			$ws_all->write($i,$j++, $name);
+//			$ws_all->write($i,$j++, $row['exp']);
+//			$ws_all->write($i,$j++, $row['instrument']);
+//			$ws_all->write($i,$j++, $row['prefer']);
+//			$ws_all->write($i,$j++, $row['abroad']);
+//			$ws_all->write($i,$j++, $row['joined']);
+//			$ws_all->write($i,$j++, $row['points']);
+//			$i++;
+//		}
+//		
+//		//Senior by TP
+//		$ws_all =& $workbook->addWorksheet('Senior by TP');
+//		$ws_all->write(0,0, 'Name', $bold);
+//		$ws_all->write(0,1, 'Expierence', $bold);
+//		$ws_all->write(0,2, 'Instrument', $bold);
+//		$ws_all->write(0,3, 'Prefer', $bold);
+//		$ws_all->write(0,4, 'Abroad', $bold);
+//		$ws_all->write(0,5, 'Joined', $bold);
+//		$ws_all->write(0,6, 'Points', $bold);
+//		
+//		$results = $db->getAll($this->year_tp, array(4));
+//		$i = 1;
+//		while( list($temp, $row) = each($results) )
+//		{
+//			$j = 0;
+//			$name = $row['lastname'].", ".$row['firstname'];
+//			$ws_all->write($i,$j++, $name);
+//			$ws_all->write($i,$j++, $row['exp']);
+//			$ws_all->write($i,$j++, $row['instrument']);
+//			$ws_all->write($i,$j++, $row['prefer']);
+//			$ws_all->write($i,$j++, $row['abroad']);
+//			$ws_all->write($i,$j++, $row['joined']);
+//			$ws_all->write($i,$j++, $row['points']);
+//			$i++;
+//		}
+//		
+//		//Senior by ITP
+//		$ws_all =& $workbook->addWorksheet('Senior by ITP');
+//		$ws_all->write(0,0, 'Name', $bold);
+//		$ws_all->write(0,1, 'Expierence', $bold);
+//		$ws_all->write(0,2, 'Instrument', $bold);
+//		$ws_all->write(0,3, 'Prefer', $bold);
+//		$ws_all->write(0,4, 'Abroad', $bold);
+//		$ws_all->write(0,5, 'Joined', $bold);
+//		$ws_all->write(0,6, 'Points', $bold);
+//		
+//		$results = $db->getAll($this->year_itp, array(4));
+//		$i = 1;
+//		while( list($temp, $row) = each($results) )
+//		{
+//			$j = 0;
+//			$name = $row['lastname'].", ".$row['firstname'];
+//			$ws_all->write($i,$j++, $name);
+//			$ws_all->write($i,$j++, $row['exp']);
+//			$ws_all->write($i,$j++, $row['instrument']);
+//			$ws_all->write($i,$j++, $row['prefer']);
+//			$ws_all->write($i,$j++, $row['abroad']);
+//			$ws_all->write($i,$j++, $row['joined']);
+//			$ws_all->write($i,$j++, $row['points']);
+//			$i++;
+//		}
 							
 		$option_p1 = "SELECT sum(dumb_sec_codes.points) AS points," .
 				"dumb_members.username, dumb_members.firstname, dumb_members.lastname, " .
@@ -348,7 +357,7 @@ class selection
 		$option_p2iept = " > 0 GROUP BY dumb_members.username " .
 				"ORDER BY dumb_instruments.instrument, dumb_tournament_form.exp DESC, points DESC";
 		
-		for($k = 1; $k < 6; $k++)
+		for($k = 1; $k <= 8; $k++)
 		{
 			//Opiton x by ETP
 			$title = "Option $k by ETP";
@@ -416,33 +425,33 @@ class selection
 		}
 		
 		//Opiton 6
-		$ws_all =& $workbook->addWorksheet('Option 6');
-		$ws_all->write(0,0, 'Name', $bold);
-		$ws_all->write(0,1, 'Expierence', $bold);
-		$ws_all->write(0,2, 'Instrument', $bold);
-		$ws_all->write(0,3, 'Prefer', $bold);
-		$ws_all->write(0,4, 'Abroad', $bold);
-		$ws_all->write(0,5, 'Joined', $bold);
-		$ws_all->write(0,6, 'Points', $bold);
-		
-		$query = $option_p1."6".$option_p12."6".$option_p2iept;
-		$option = "option_6";
-		
-		$results = $db->getAll($query);
-		$i = 1;
-		while( list($temp, $row) = each($results) )
-		{
-			$j = 0;
-			$name = $row['lastname'].", ".$row['firstname'];
-			$ws_all->write($i,$j++, $name);
-			$ws_all->write($i,$j++, $row['exp']);
-			$ws_all->write($i,$j++, $row['instrument']);
-			$ws_all->write($i,$j++, $row['prefer']);
-			$ws_all->write($i,$j++, $row['abroad']);
-			$ws_all->write($i,$j++, $row['joined']);
-			$ws_all->write($i,$j++, $row['points']);
-			$i++;
-		}
+//		$ws_all =& $workbook->addWorksheet('Option 6');
+//		$ws_all->write(0,0, 'Name', $bold);
+//		$ws_all->write(0,1, 'Expierence', $bold);
+//		$ws_all->write(0,2, 'Instrument', $bold);
+//		$ws_all->write(0,3, 'Prefer', $bold);
+//		$ws_all->write(0,4, 'Abroad', $bold);
+//		$ws_all->write(0,5, 'Joined', $bold);
+//		$ws_all->write(0,6, 'Points', $bold);
+//		
+//		$query = $option_p1."6".$option_p12."6".$option_p2iept;
+//		$option = "option_6";
+//		
+//		$results = $db->getAll($query);
+//		$i = 1;
+//		while( list($temp, $row) = each($results) )
+//		{
+//			$j = 0;
+//			$name = $row['lastname'].", ".$row['firstname'];
+//			$ws_all->write($i,$j++, $name);
+//			$ws_all->write($i,$j++, $row['exp']);
+//			$ws_all->write($i,$j++, $row['instrument']);
+//			$ws_all->write($i,$j++, $row['prefer']);
+//			$ws_all->write($i,$j++, $row['abroad']);
+//			$ws_all->write($i,$j++, $row['joined']);
+//			$ws_all->write($i,$j++, $row['points']);
+//			$i++;
+//		}
 
 		//Comments
 		$query = "SELECT * from dumb_members, dumb_tournament_form WHERE dumb_members.username = dumb_tournament_form.username " .
@@ -615,6 +624,18 @@ class selection
 		$this->alle = "SELECT sum(dumb_sec_codes.points) as points, " .
 						"dumb_members.username, dumb_members.firstname, " .
 						"dumb_members.lastname, dumb_instruments.instrument, dumb_tournament_form.exp " .
+						"FROM dumb_members, dumb_sec_codes, dumb_sec_attendance, dumb_instruments, dumb_tournament_form " .
+						"WHERE " .
+						"dumb_members.username = dumb_tournament_form.username and " .
+						"dumb_members.username = dumb_sec_attendance.username and " .
+						"dumb_sec_attendance.code_id = dumb_sec_codes.code_id and " .
+						"dumb_members.instrument_id = dumb_instruments.instrument_id " .
+						"GROUP BY dumb_members.username " .
+						"ORDER BY dumb_instruments.instrument, dumb_tournament_form.exp desc, points desc";
+		
+		$this->alleo = "SELECT sum(dumb_sec_codes.points) as points, " .
+						"dumb_members.username, dumb_members.firstname, " .
+						"dumb_members.lastname, dumb_instruments.instrument, dumb_tournament_form.exp, dumb_tournament_form.option_1, dumb_tournament_form.option_2, dumb_tournament_form.option_3, dumb_tournament_form.option_4, dumb_tournament_form.option_5, dumb_tournament_form.option_6, dumb_tournament_form.option_7, dumb_tournament_form.option_8 " .
 						"FROM dumb_members, dumb_sec_codes, dumb_sec_attendance, dumb_instruments, dumb_tournament_form " .
 						"WHERE " .
 						"dumb_members.username = dumb_tournament_form.username and " .
