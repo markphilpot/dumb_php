@@ -49,6 +49,7 @@ Ext.onReady(function(){
 	var login_window = new Ext.Window({
 		applyTo		: 'login-win',
 		layout		: 'fit',
+		closable	: false,
 		width		: 400,
 		height		: 300,
 		plain		: true,
