@@ -1,10 +1,3 @@
-<h3><span>News</span></h3>
-<ul id="category">
-{section name=i loop=$news}
-	<li><a href="current.php">{$news[i].title}</a></li>
-{/section}
-</ul>
-
 <h3><span>Upcoming Events</span></h3>
 <ul id="dates">
 {section name=i loop=$upcoming}	
