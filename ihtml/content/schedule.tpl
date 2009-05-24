@@ -1,4 +1,5 @@
-<h1>{$category[0].name}</h1>
+<div class="article">
+<h2><span>{$category[0].name}</span></h2>
 <table border="1" width="100%" id="roster">
   <tr class='table_header'>
 	<th>Date</th>
@@ -46,3 +47,4 @@ $i++;
   </tr>
 {/section}
 </table>
+</div> <!-- end article -->
