@@ -1,4 +1,5 @@
-<h1>Prospective Members</h1>
+<div class="article">
+<h2><span>Prospective Members</span></h2>
 <p>Are you an incoming freshman considering membership in the marching band?  
 We'd like to get to know you better by asking you to complete the form below.</p>
 <p>{$response}</p>
@@ -66,3 +67,4 @@ We'd like to get to know you better by asking you to complete the form below.</p
    </tr>
 </table>
 </form>
+</div> <!-- end article -->
