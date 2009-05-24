@@ -1,5 +1,5 @@
 <div class="article">
-<h2><span>Band Leadership</span></h2>
+<h2><span>{$front[i].title}</span></h2>
 
 <h3>Director</h3>
 {section name=i loop=$director}

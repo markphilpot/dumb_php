@@ -1,7 +1,10 @@
-<div id="large_content">
 {section name=i loop=$front}
-<!-- <div class="date">{$front[i].date}</div> -->
-<div class="title">{$front[i].title}</div>
-<div class="content">{$front[i].content}</div>
+<div class="article">
+<h2><span>{$front[i].title}</span></h2>
+ 
+
+{$front[i].content}
+ 
+</div> <!-- end article -->
+<hr class="noscreen">
 {/section}
-</div> <!-- end large_content -->
