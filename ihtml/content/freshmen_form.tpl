@@ -1,5 +1,5 @@
 <div class="article">
-<h2><span>Prospective Members</span></h2>
+<h2><span>Information Request</span></h2>
 <p>Are you an incoming freshman considering membership in the marching band?  
 We'd like to get to know you better by asking you to complete the form below.</p>
 <p>{$response}</p>

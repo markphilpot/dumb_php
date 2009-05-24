@@ -148,8 +148,8 @@ if(isset($form_data['Submit']))
 $t->assign('title', 'Duke University Marching & Pep Band');
 $t->assign('include_file', 'content/freshmen_form.tpl');
 $t->assign('loc', 'current');
-$t->assign('sidebar', 'sidebar/information.tpl');
-$t->assign('breadcrumb', "<a href='index.php'>Home</a> > <a href='freshmen.php'>Admitted Freshmen</a> > Information Request");
+$t->assign('sidebar', 'sidebar/current.tpl');
+$t->assign('breadcrumb', "<a href='index.php'>Home</a> > <a href='current.php'>Prospective Members</a> > Information Request");
 
 $t->assign('response', $response);
 /*

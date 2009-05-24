@@ -7,7 +7,7 @@ $t->assign('front', $db->getAll("select * from dumb_content where loc='join' ord
 $t->assign('loc', 'current');
  
 $t->assign('sidebar', 'sidebar/current.tpl');
-$t->assign('breadcrumb', "<a href='index.php'>Home</a> > <a href='current.php'>Prospective Members</a> > Join ");
+$t->assign('breadcrumb', "<a href='index.php'>Home</a> > <a href='current.php'>Prospective Members</a> > Join the Duke Band");
  
 $t->display('main.tpl');
 ?>
