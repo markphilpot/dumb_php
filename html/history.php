@@ -7,7 +7,7 @@ $t->assign('front', $db->getAll("select * from dumb_content where loc='history' 
 $t->assign('loc', 'about');
 
 $t->assign('sidebar', 'sidebar/about.tpl');
-$t->assign('breadcrumb', "<a href='index.php'>Home</a> > <a href='dim.php'>Information</a> > History");
+$t->assign('breadcrumb', "<a href='index.php'>Home</a> > <a href='about.php'>About Us</a> > History");
 
 $t->display('main.tpl');
 ?>
