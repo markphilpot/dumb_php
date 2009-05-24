@@ -9,7 +9,7 @@ $t->assign('front', $db->getAll("select * from dumb_content where loc='sectionle
 
 $t->assign('loc', 'leadership');
 
-$t->assign('breadcrumb', "<a href='index.php'>Home</a> > <a href='leadership.php'>Leadership</a> > Section Leader Responsibilities");
+$t->assign('breadcrumb', "<a href='index.php'>Home</a> > <a href='leadership.php'>Leadership</a> > Section Leaders");
 
 $t->display('main.tpl');
 ?>
