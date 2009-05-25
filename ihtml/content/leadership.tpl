@@ -1,6 +1,6 @@
 {section name=i loop=$front}
 <div class="article">
-<h2><span>{$front[i].title}</span></h2>
+<h2><span>Director</span></h2>
 
 {$front[i].content}
 

@@ -7,7 +7,7 @@ $t->assign('sidebar', 'sidebar/leadership.tpl');
 
 $t->assign('front', $db->getAll("select * from dumb_content where loc='officers'"));
 
-$t->assign('loc', 'leadership');
+$t->assign('loc', 'director');
 
 $t->assign('breadcrumb', "<a href='index.php'>Home</a> > <a href='leadership.php'>Leadership</a> > Officers");
 
