@@ -6,7 +6,7 @@ $t->assign('include_file', 'content/director.tpl');
 $t->assign('sidebar', 'sidebar/leadership.tpl');
 
 $t->assign('front', $db->getAll("select * from dumb_content where loc='director' order by date desc"));
-$t->assign('loc', 'leadership');
+$t->assign('loc', 'director');
 
 $t->assign('breadcrumb', "<a href='index.php'>Home</a> > Leadership");
 
