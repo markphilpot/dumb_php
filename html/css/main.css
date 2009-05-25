@@ -179,7 +179,7 @@ code, kbd, samp {font-family:monospace; font-size:110%;}
  
  
 /* Footer */
-#footer {position:relative; clear:both; width: 1000 px; height:60px; border-top: 2px solid #8CA3D8; padding: 5px 0; background: #FFF; color:#6685CC; text-align:center;}
+#footer {position:relative; clear:both; width: 1000 px; height:70px; border-top: 2px solid #8CA3D8; padding: 5px 0; background: #FFF; color:#6685CC; text-align:center;}
 #footer a {color:#6685CC;}
 #footer a:hover {color:#192666;}
  
