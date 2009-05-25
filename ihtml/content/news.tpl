@@ -1,9 +1,9 @@
-<div id="front_content">
 {section name=i loop=$front}
-<div class="front_entry">
-<div class="title">{$front[i].title}</div>
-<div class="date">{$front[i].date|date_format:"%A, %B %e, %Y"}</div>
-<div class="content">{$front[i].content}</div>
-</div> <!-- end front_entry -->
+<div class="article">
+<h2><span>{$front[i].title}</span></h2>
+
+{$front[i].content}
+
+</div> <!-- end article -->
+<hr class="noscreen">
 {/section}
-</div> <!-- end front_content -->
