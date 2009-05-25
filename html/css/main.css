@@ -19,7 +19,7 @@ a:hover {color:#4F6AD7;}
 a:visited {color:#777777;}
  
  
-p {border:0; margin:15px 0; padding:0;line-height:15px;font-size:12px;}
+p {border:0; margin:15px 0; padding:0; font-size:12px;}
  
 div {display:block; border:0; margin:0; padding:0;}
  
@@ -130,7 +130,7 @@ code, kbd, samp {font-family:monospace; font-size:110%;}
     #content .article h2 {margin:0 -20px; padding:10px; background:#192666 url("../ design/content_title_bg.gif") 0 0 repeat-y; color:#DEE5FD ;}
     #content .article h2 a {text-decoration: none; color:#DEE5FD;}
     #content .article h2 span {background:url("../design/ico_list.gif") 0 50% no-repeat; padding-left:25px;}
-    #content .article p {text-align:left;}
+    #content .article p {text-align:left; line-height:15px;}
     #content .info {margin:10px 0; padding-bottom:8px; border-bottom:1px solid #DEE5FD; color:#6685CC;}
     #content .info a {color:#6685CC;}
     #content .info a:hover {color:#FF9000;}
