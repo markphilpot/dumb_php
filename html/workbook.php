@@ -1,5 +1,5 @@
 <?php
-$require_login = false;
+$require_login = true;
 require_once 'include/set_env.php';
 include 'include/selection.php';
 $selection = new selection();
