@@ -44,7 +44,7 @@ if(isset($form_data['Submit']))
       //return $objResponse;
    }*/
    
-   $result = $db->getAll('insert into dumb_freshmen_form values (NULL,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)', array($form_data['name'],
+   $result = $db->getAll('insert into dumb_freshmen_form values (NULL,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)', array($form_data['name'],
                                                                                        $form_data['address'],
                                                                                        $form_data['city'],
                                                                                        $form_data['state'],
@@ -179,7 +179,7 @@ $form->addElement('text', 'graduation', 'Duke Graduation Year', array('size' => 
 $form->addElement('text', 'major', 'Intended Major', array('size' => 40, 'maxlength' =>80 ));
 $form->addElement('select', 'size', 'Shirt Size', array('S'=>'S', 'M'=>'M', 'L'=>'L', 'XL'=>'XL', 'XXL'=>'XXL'));
 $form->addElement('text', 'dukeID', 'Net ID', array('size' => 20, 'maxlength' => 20 ));
-$form->addElement('text', 'hsexp', 'Please tell us what you enjoyed most about your high school band experience');
+$form->addElement('textarea', 'hsexp', 'Please tell us what you enjoyed most about your high school band experience');
 $form->addElement('textarea', 'questions', 'Questions');
 $form->addElement('file', 'image', 'Send us your photo');
 $form->addElement('reset', 'Clear', 'Clear');

@@ -4,7 +4,7 @@ require_once 'include/set_env.php';
 $section = $_REQUEST['s'];
 $t->assign('title', 'Duke University Marching & Pep Band');
 $t->assign('include_file', 'content/sections.tpl');
-$t->assign('front', $db->getAll("select * from dumb_content where loc=$section order by date desc"));
+$t->assign('front', $db->getAll("select * from dumb_content where loc=? order by date desc", array($section)));
 $t->assign('loc', 'about');
  
 $t->assign('sidebar', 'sidebar/about.tpl');

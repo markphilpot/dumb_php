@@ -5,7 +5,7 @@
   <li><a href="history.php">History</a></li>
 </ul>
 <h3><span>Section Pages</span></h3>
-<ul id="category>
+<ul id="category">
   <li><a href="sections.php?s=flute">Flutes</a></li>
   <li><a href="sections.php?s=clarinet">Clarinets</a></li>
   <li><a href="sections.php?s=sax">Saxophones</a></li>

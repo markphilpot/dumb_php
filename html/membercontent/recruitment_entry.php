@@ -100,6 +100,8 @@ print '<h5 class="center"><a href="members.php?loc=recruitment">Back</a></h5>';
 <p><b>Intended Major</b> -- <?php echo $rec['major']; ?></p>
 <p><b>Shirt Size</b> -- <?php echo $rec['size']; ?></p>
 <p><b>Duke ID</b> -- <?php echo $rec['dukeID']; ?></p>
+<p><b>Highschool Experience</b></p>
+<p><blockquote><?php echo $rec['hsexp']; ?></blockquote</p>
 <p><b>Questions</b></p>
 <p><blockquote><?php echo $rec['questions']; ?></blockquote></p>
 

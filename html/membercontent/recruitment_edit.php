@@ -31,6 +31,7 @@ if(isset($form_data['Submit']))
 	   "graduation=?,".
 	   "major=?,".
 	   "size=?,".
+           "hsexp=?,".
 	   "questions=? ".
 	   "WHERE id=?", array($form_data['name'],
                                                                                        $form_data['address'],
@@ -45,6 +46,7 @@ if(isset($form_data['Submit']))
                                                                                        $form_data['graduation'],
                                                                                        $form_data['major'],
                                                                                        $form_data['size'],
+                                                                                       $form_data['hsexp'],
                                                                                        $form_data['questions'],
 									 	       $_REQUEST['entry_id']));
    
@@ -165,6 +167,7 @@ $form->addElement('text', 'director', 'Band Director', array('size' => 40, 'maxl
 $form->addElement('text', 'graduation', 'Graduation Year', array('size' => 4, 'maxlength' =>4 ));
 $form->addElement('text', 'major', 'Intended Major', array('size' => 40, 'maxlength' =>80 ));
 $form->addElement('select', 'size', 'Shirt Size', array('S'=>'S', 'M'=>'M', 'L'=>'L', 'XL'=>'XL', 'XXL'=>'XXL'));
+$form->addElement('textarea', 'hsexp', 'Highschool Experience');
 $form->addElement('textarea', 'questions', 'Questions');
 $form->addElement('file', 'image', 'Photo');
 $form->addElement('submit', 'Submit', 'Submit');
@@ -193,6 +196,7 @@ $form_defaults = array( 'name' => $entry['name'],
 	'graduation' => $entry['graduation'],
 	'major' => $entry['major'],
 	'size' => $entry['size'],
+	'hsexp' => $entry['hsexp'],
 	'questions' => $entry['questions']);
 
 $form->setDefaults($form_defaults);
@@ -219,6 +223,7 @@ $data = '<table width="50%" border="1" cellspacing="0" cellpadding="1">' .
 		'<tr> <th class="table_header">Graduation Year</th> <td>'.$r->elementToHtml('graduation').'</td> </tr>' .
 		'<tr> <th class="table_header">Expected Major</th> <td>'.$r->elementToHtml('major').'</td> </tr>' .
 		'<tr> <th class="table_header">Shirt Size</th> <td>'.$r->elementToHtml('size').'</td> </tr>' .		
+                '<tr> <th class="table_header">Highschool Experience</th> <td>'.$r->elementToHtml('hsexp').'</td> </tr>' .
 		'<tr> <th class="table_header">Questions</th> <td>'.$r->elementToHtml('questions').'</td> </tr>' .
 		'<tr> <th class="table_header">Change Photo<br><img src="'.$sup['picture_file'].'" alt="(image)" /></th> <td>'.$r->elementToHtml('image').'</td> </tr>' .
 		'</table>';
