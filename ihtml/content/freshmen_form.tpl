@@ -54,6 +54,10 @@ We'd like to get to know you better by asking you to complete the form below.</p
       <td>{$FormData.image.html}</td>
    </tr> -->
    <tr>
+      <th class="form_header">{$FormData.hsexp.label}</th>
+      <td>{$FormData.hsexp.html}</td>
+   </tr>
+   <tr>
       <th class="form_header">{$FormData.questions.label}</th>
       <td>{$FormData.questions.html}</td>
    </tr>
