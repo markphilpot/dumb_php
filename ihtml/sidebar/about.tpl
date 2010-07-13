@@ -8,9 +8,10 @@
 <ul id="category">
   <li><a href="sections.php?s=flute">Flutes</a></li>
   <li><a href="sections.php?s=clarinet">Clarinets</a></li>
-  <li><a href="sections.php?s=sax">Saxophones</a></li>
-  <li><a href="sections.php?s=trumpet">Trumpets & Horns</a></li>
-  <li><a href="sections.php?s=trombone">Trombones</a></li>
-  <li><a href="sections.php?s=tuba">Sousaphones</a></li>
-  <li><a href="sections.php?s=percussion">Percussion</a></li>
+  <li><a href="http://wiki.dukeband.org/index.php/Saxophones">Saxophones</a></li>
+  <li><a href="http://wiki.dukeband.org/index.php/Trumpets">Trumpets</a></li>
+  <li><a href="http://wiki.dukeband.org/index.php/Horns">Horns</a></li>
+  <li><a href="http://wiki.dukeband.org/index.php/Trombones">Trombones</a></li>
+  <li><a href="http://wiki.dukeband.org/index.php/Sousaphones">Sousaphones</a></li>
+  <li><a href="http://wiki.dukeband.org/index.php/Drumline">Drumline</a></li>
 </ul>
