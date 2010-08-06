@@ -6,6 +6,7 @@
 	<li{if $loc == 'about'} id="active"{/if}><a href="about.php">About Us<span class="tab-l"></span><span class="tab-r"></span></a></li>
 	<li{if $loc == 'director'} id="active"{/if}><a href="director.php">Leadership<span class="tab-l"></span><span class="tab-r"></span></a></li>
   <li{if $loc == 'calendar'} id="active"{/if}><a href="calendar.php">Calendar<span class="tab-l"></span><span class="tab-r"></span></a></li>
+	<li{if $loc == 'resources'} id="active"{/if}><a href="resources.php">Resources<span class="tab-l"></span><span class="tab-r"></span></a></li>
 	<li{if $loc == 'login'} id="active"{/if}><a href="javascript:Login();">Login<span class="tab-l"></span><span class="tab-r"></span></a></li>
 </ul>
 
