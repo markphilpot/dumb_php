@@ -81,7 +81,7 @@ while( list($temp, $row) = each($instruments) )
 	$inst[ $row['instrument_id'] ] = $row['instrument'];
 }
 $form->addElement('select', 'instrument', null, $inst);
-$form->addElement('date', 'year', null, array('format'=>'Y', 'minYear'=>2003, 'maxYear'=>2020));
+$form->addElement('date', 'year', null, array('format'=>'Y', 'minYear'=>2013, 'maxYear'=>2030));
 $form->addElement('text', 'phone', null, array('size' => 14, 'maxlength' => 14 ));
 $form->addElement('text', 'email', null, array('size' => 30, 'maxlength' => 30 ));
 $form->addElement('password', 'password', null, array('size' => 10, 'maxlength' => 10));

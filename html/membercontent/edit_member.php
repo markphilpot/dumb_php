@@ -97,7 +97,7 @@ while( list($temp, $row) = each($instruments) )
 }
 $form->addElement('select', 'instrument', null, $inst);
 $form->addElement('text', 'pepband', null, array('size' => 1, 'maxlength' => 1));
-$form->addElement('date', 'year', null, array('format'=>'Y', 'minYear'=>2003, 'maxYear'=>2025));
+$form->addElement('date', 'year', null, array('format'=>'Y', 'minYear'=>2013, 'maxYear'=>2030));
 $form->addElement('text', 'phone', null, array('size' => 14, 'maxlength' => 14 ));
 $form->addElement('text', 'email', null, array('size' => 30, 'maxlength' => 30 ));
 

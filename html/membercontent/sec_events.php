@@ -65,7 +65,7 @@ $date_defaults = array( 'd' => date('d'), 'm' => date('m'), 'Y' => date('Y'));
 $form->setDefaults(array('event_date' => $date_defaults));
 // Make Elements
 $form->addElement('header', '', 'Add Event');
-$form->addElement('date', 'event_date', 'Date:', array('format'=>'m-d-Y', 'minYear'=>2003, 'maxYear'=>2020));
+$form->addElement('date', 'event_date', 'Date:', array('format'=>'m-d-Y', 'minYear'=>2013, 'maxYear'=>2030));
 $form->addElement('text', 'event_name', 'Name:');
 $entry_cats = array();
 while( list($temp, $row) = each($categories) )
@@ -106,7 +106,7 @@ if( isset($_REQUEST['edit_event']) )
 		// Make Elements
 		$up_form->addElement('header', '', 'Add Event');
 		$up_form->addElement('hidden', 'up_event_id', 'event_id');
-		$up_form->addElement('date', 'up_event_date', 'Date:', array('format'=>'m-d-Y', 'minYear'=>2003, 'maxYear'=>2020));
+		$up_form->addElement('date', 'up_event_date', 'Date:', array('format'=>'m-d-Y', 'minYear'=>2013, 'maxYear'=>2030));
 		$up_form->addElement('text', 'up_event_name', 'Name:');
 		$entry_cats = array();
 		reset($categories);
