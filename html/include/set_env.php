@@ -13,14 +13,13 @@ require_once 'include/error.php';
 
 // Client specific variables
 set_error_handler("ErrorHandler");
-error_reporting(E_ALL ^ E_NOTICE);
 
-$EMAIL = "foo@bar.net";
+$EMAIL = "mark.philpot@gmail.com";
 
 require_once 'include/database.php';
 
 // Setup include path
-$web_root = 'http://localhost/dumb/dumbPHP/html/';
+$web_root = 'http://www.dukeband.org/';
 $app_root = '..';
 # note:  sometimes pear is installed at /usr/local/lib/php/ but I 
 # recommend getting a copy that is local to your application so 
@@ -100,8 +99,8 @@ session_start();
 
 // Add user authentication here if you want
 // This example uses pear::Auth
-//$dns = "mysql://".$dbUser.":".$dbPass."@".$dbServer."/".$dbDatabase;
-$dns = "mysql://".$dbUser."@".$dbServer."/".$dbDatabase;
+$dns = "mysql://".$dbUser.":".$dbPass."@".$dbServer."/".$dbDatabase;
+//$dns = "mysql://".$dbUser."@".$dbServer."/".$dbDatabase;
 
 $auth = new Auth('DB', array(
 		'dsn' => $dns,

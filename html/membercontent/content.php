@@ -116,7 +116,7 @@ if( $area == "front" || $area == "news" )
 										'up_entry_date' => $date_defaults,
 										'up_entry_id' => $row['content_id']);
 
-		$form->addElement('date', 'up_entry_date', 'Date:', array('format'=>'m-d-Y', 'minYear'=>2003, 'maxYear'=>2010));
+		$form->addElement('date', 'up_entry_date', 'Date:', array('format'=>'m-d-Y', 'minYear'=>2003, 'maxYear'=>2020));
 		$form->addElement('text', 'up_entry_title', 'Title:');
 		//$form->addElement('textarea', 'up_entry_content', '', array('rows' => 7, 'cols' => 60));
 		$form->addElement("fckeditor","up_entry_content",'',array( 'toolbarset'=>'Content' ,'width' => '100%', 'height' => 300 ));
@@ -140,7 +140,7 @@ if( $area == "front" || $area == "news" )
 		$form->setDefaults(array('entry_date' => $date_defaults));
 		// Make Elements
 		$form->addElement('header', '', 'Add Entry');
-		$form->addElement('date', 'entry_date', 'Date:', array('format'=>'m-d-Y', 'minYear'=>2003, 'maxYear'=>2010));
+		$form->addElement('date', 'entry_date', 'Date:', array('format'=>'m-d-Y', 'minYear'=>2003, 'maxYear'=>2020));
 		$form->addElement('text', 'entry_title', 'Title:');
 		//$form->addElement('textarea', 'entry_content', '', array('rows' => 7, 'cols' => 60));
 		$form->addElement("fckeditor","entry_content",'',array( 'toolbarset'=>'Content' ,'width' => '100%', 'height' => 300 ));
@@ -236,7 +236,7 @@ else
 		
 		// Make Elements
 		$form->addElement('header', '', 'Edit Entry');
-		$form->addElement('date', 'entry_date', 'Date:', array('format'=>'m-d-Y', 'minYear'=>2003, 'maxYear'=>2010));
+		$form->addElement('date', 'entry_date', 'Date:', array('format'=>'m-d-Y', 'minYear'=>2003, 'maxYear'=>2020));
 		$form->addElement('text', 'entry_title', 'Title:');
 		//$form->addElement('textarea', 'entry_content', '', array('rows' => 25, 'cols' => 80));
 		$form->addElement("fckeditor","entry_content",'',array( 'toolbarset'=>'Content' ,'width' => '100%', 'height' => 500 ));

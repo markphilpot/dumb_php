@@ -83,7 +83,7 @@ if( isset($_REQUEST['del_id']) )
 										'date' => $date_defaults,
 										'id' => $row['calendar_id']);
 
-		$form->addElement('date', 'date', 'Date:', array('format'=>'m-d-Y', 'minYear'=>2003, 'maxYear'=>2010));
+		$form->addElement('date', 'date', 'Date:', array('format'=>'m-d-Y', 'minYear'=>2003, 'maxYear'=>2020));
 		$form->addElement('text', 'title', 'Title:');
 		$form->addElement("fckeditor","details",'',array( 'toolbarset'=>'Content' ,'width' => '100%', 'height' => 300 ));
 		$form->addElement('hidden', 'id', 'id');
@@ -105,7 +105,7 @@ if( isset($_REQUEST['del_id']) )
 		$form->setDefaults(array('date' => $date_defaults));
 		// Make Elements
 		$form->addElement('header', '', 'Add Entry');
-		$form->addElement('date', 'date', 'Date:', array('format'=>'m-d-Y', 'minYear'=>2003, 'maxYear'=>2010));
+		$form->addElement('date', 'date', 'Date:', array('format'=>'m-d-Y', 'minYear'=>2003, 'maxYear'=>2020));
 		$form->addElement('text', 'title', 'Title:');
 		$form->addElement("fckeditor","details",'',array( 'toolbarset'=>'Content' ,'width' => '100%', 'height' => 300 ));
 		$form->addElement('submit', 'add', 'Add');

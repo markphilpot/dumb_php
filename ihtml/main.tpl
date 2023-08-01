@@ -31,7 +31,7 @@
 
 <h3><span>Links</span></h3>
 <ul id="links">
-	<li><a href="http://www.dukealumni.com/olc/pub/DUKE/cpages/affinities/home.jsp?chapter=45&org=DUKE">DUMB Alumni</a></li> 
+	<li><a href="http://www.dukealumniband.org">DUMB Alumni</a></li> 
     <li><a href="http://www.goduke.com">GoDuke.com</a></li>
     <li><a href="http://maps.duke.edu">Duke Maps</a></li> 
 </ul>

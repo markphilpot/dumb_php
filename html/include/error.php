@@ -9,8 +9,9 @@
  
 function ErrorHandler( $errno, $errstr, $errfile, $errline )
 {
-	$error_msg = " $errstr occured in $errfile on line $errline at <i>".date("D M j G:i:s Y")."</i> (Problem has been emailed to admin)";
-	$email_address = "admin@mcstudios.net";
+	$error_msg = " $errstr occured in $errfile on line $errline at <i>".date("D M j G:i:s Y")."</i> (Problem has been emailed to admin)\n";
+	//$error_details = print_r(debug_backtrace(), true);
+	$email_address = "mark.philpot@gmail.com";
 	$host = "localhost"; // Pager/dbg host
 	$logfile = "";
 	
@@ -26,6 +27,8 @@ function ErrorHandler( $errno, $errstr, $errfile, $errline )
 	
 	switch($errno)
 	{
+		case E_DEPRECATED:
+		case E_USER_DEPRECATED:
 		case E_USER_NOTICE:
 		case E_NOTICE:
 			
@@ -87,7 +90,7 @@ function ErrorHandler( $errno, $errstr, $errfile, $errline )
 		
 		if( $stdlog )
 		{
-			if($logfile = "")
+			if($logfile == "")
 			{
 				error_log($error_msg, 0);
 			}

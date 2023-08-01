@@ -6,12 +6,12 @@
 </ul>
 <h3><span>Section Pages</span></h3>
 <ul id="category">
-  <li><a href="http://wiki.dukeband.org/index.php/Flutes">Flutes</a></li>
-  <li><a href="http://wiki.dukeband.org/index.php/Clarinets">Clarinets</a></li>
-  <li><a href="http://wiki.dukeband.org/index.php/Saxophones">Saxophones</a></li>
-  <li><a href="http://wiki.dukeband.org/index.php/Trumpets">Trumpets</a></li>
-  <li><a href="http://wiki.dukeband.org/index.php/Horns">Horns</a></li>
-  <li><a href="http://wiki.dukeband.org/index.php/Trombones">Trombones</a></li>
-  <li><a href="http://wiki.dukeband.org/index.php/Sousaphones">Sousaphones</a></li>
-  <li><a href="http://wiki.dukeband.org/index.php/Drumline">Drumline</a></li>
+  <li><a href="http://sites.duke.edu/dumband/flutes/">Flutes</a></li>
+  <li><a href="http://sites.duke.edu/dumband/clarinets-2/">Clarinets</a></li>
+  <li><a href="http://sites.duke.edu/dumband/saxophones/">Saxophones</a></li>
+  <li><a href="http://sites.duke.edu/dumband/trumpets/">Trumpets</a></li>
+  <li><a href="http://sites.duke.edu/dumband/horns/">Horns</a></li>
+  <li><a href="http://sites.duke.edu/dumband/trombones/">Trombones</a></li>
+  <li><a href="http://sites.duke.edu/dumband/sousaphones/">Sousaphones</a></li>
+  <li><a href="http://sites.duke.edu/dumband/drumline/">Drumline</a></li>
 </ul>
